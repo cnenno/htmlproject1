@@ -2,8 +2,8 @@
 
 /* Connect to the Azure MS SQL 2019 Express server using AD DS Authentication  */  
 
-$serverName = "SQLServer";
-$connectionInfo = array("Database"=>"Group1 Database","CharacterSet"=>"UTF-8");
+$serverName = "SQLSERVER\SQLEXPRESS";
+$connectionInfo = array("Database"=>"Group_1_Database","CharacterSet"=>"UTF-8");
 
 $conn = sqlsrv_connect( $serverName, $connectionInfo);
 
@@ -30,7 +30,7 @@ $zip = $_POST ["zip"];
 
 
 $params1 = array(
-	array ($fName, null),
+	array ($fname, null),
 	array($lname, null),
 	array($email, null),
 	array($cell, null),
