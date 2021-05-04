@@ -14,30 +14,30 @@ if( $conn ) {
      die( print_r( sqlsrv_errors(), true));
 }  
 /* Define the query */  
-$tsql1 = "INSERT INTO dbo.table1 (fname, lname, email, cell, address, city, state, zip)  
+$tsql1 = "INSERT INTO dbo.table1 (firstname, lastname, email, address, city, state, zipcode, phone)  
            VALUES (?, ?, ?, ?, ?, ?, ?, ?)";  
 
 /* Construct the parameter array from HTML variable inputs */  
-$fname = $_POST ["fname"];  
-$lname = $_POST ["lname"];  
-$email = $_POST ["email"];  
-$cell = $_POST ["cell"];
-$address = $_POST ["address"];
+$firstname = $_POST ["firstname"];  
+$lastname = $_POST ["lastname"];  
+$email = $_POST ["email"];
+$address = $_POST ["address"];  
 $city = $_POST ["city"];
 $state = $_POST ["state"];
-$zip = $_POST ["zip"];
+$zipcode = $_POST ["zipcode"];
+$phone = $_POST ["phone"];
 
 
 
 $params1 = array(
-	array ($fname, null),
-	array($lname, null),
+	array ($firstname, null),
+	array($lastname, null),
 	array($email, null),
-	array($cell, null),
 	array($address, null),
 	array($city, null),
 	array($state, null),
-	array($zip, null)   
+	array($zipcode, null),
+	array($phone, null)  
            );    
 
 /* Execute the INSERT query. */  
