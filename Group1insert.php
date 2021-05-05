@@ -49,9 +49,15 @@ if( $stmt1 === false )
 }  
 if( $stmt1 ) 
 {
-     echo "Database updated.<br />";
+     echo "Database updated by Webserver1.
+     <br />";
 }else{
      echo "Connection could not be established.<br />";
      die( print_r( sqlsrv_errors(), true));
 }
+
+ 
+echo '<img src="iisstart.jpeg"/>';
+
+//C:\inetpub\wwwroot\iisstart.png
 ?>
